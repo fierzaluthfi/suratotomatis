@@ -67,8 +67,8 @@
       try {
         const response = await fetch(URL_GAS, {
           method: "POST",
-          // Menggunakan text/plain menghindari masalah CORS saat koneksi dari Vercel ke Google
           headers: { "Content-Type": "text/plain;charset=utf-8" },
+          redirect: "follow", 
           body: JSON.stringify(data)
         });
 
